@@ -15,7 +15,8 @@ function enrutar (poRequest, poResponse) {
     var cURL = poRequest.url,
         cPathname = url.parse(cURL).pathname,
         cExtension = path.extname(cPathname).replace('.', ''),
-        cFileLocation = gcPublicFolder + cPathname;
+        cFileLocation = gcPublicFolder + cPathname,
+        cStaticFileMimeType = goMimeTypes[cExtension];
     
     var cDebug = '';
     
@@ -32,10 +33,7 @@ function enrutar (poRequest, poResponse) {
     fs.exists(cFileLocation, function (pbFileExists) {
         if (pbFileExists) {
             console.log('El fichero existe');
-    
-            poResponse.writeHead(200, {"Content-Type": "text/plain"});
-            poResponse.write(cDebug);
-            poResponse.end();
+            serveStaticFile(poResponse, cFileLocation, cStaticFileMimeType);
         } else {
             console.log('El fichero NO existe');
             fileNotFound(poResponse, cFileLocation);
@@ -48,6 +46,13 @@ function enrutar (poRequest, poResponse) {
 exports.enrutar = enrutar;
 
 
+function serveStaticFile (poResponse, pcStaticFileURL, pcStaticFileMimeType) {
+    var oStream = {};
+    
+    poResponse.writeHead(200, {"Content-Type": pcStaticFileMimeType});
+    oStream = fs.createReadStream(pcStaticFileURL);
+    oStream.pipe(poResponse);
+}
 
 function fileNotFound (poResponse, pcStaticFileURL) {
     var oStream = {};
