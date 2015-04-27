@@ -1,6 +1,7 @@
-var compresor = require('./server/modules/compresor'),
-    server = require("./server/server");
+var generador = require('./server/modules/generador'),
+    server = require("./server/server"),
+    router = require("./server/modules/router");
 
-compresor.comprimir();
+generador.generar('../practica/public');
 
-server.start();
+server.start(router.enrutar);
