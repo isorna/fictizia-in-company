@@ -11,7 +11,7 @@ var url = require("url"),
         "js": "text/javascript",
         "css": "text/css"};
 
-function enrutar (poRequest, poResponse) {
+function enrutar (poRequest, poResponse, pfRouteHandler) {
     var cURL = poRequest.url,
         cPathname = url.parse(cURL).pathname,
         cExtension = path.extname(cPathname).replace('.', ''),
@@ -24,23 +24,34 @@ function enrutar (poRequest, poResponse) {
     // asumo que es un .html
     if (cExtension === 'html') {
         cDebug += 'ES un HTML';
+        
+        // averiguar si el fichero existe
+        fs.exists(cFileLocation, function (pbFileExists) {
+            if (pbFileExists) {
+                console.log('El fichero existe');
+                serveStaticFile(poResponse, cFileLocation, cStaticFileMimeType);
+            } else {
+                console.log('El fichero NO existe');
+                fileNotFound(poResponse, cFileLocation);
+            }
+            
+        });
     } else if (cExtension === '') {
-        cDebug += 'No tiene extension';
-        cFileLocation += '.html';
-    }
-    
-    // averiguar si el fichero existe
-    fs.exists(cFileLocation, function (pbFileExists) {
-        if (pbFileExists) {
-            console.log('El fichero existe');
-            serveStaticFile(poResponse, cFileLocation, cStaticFileMimeType);
+        cDebug += 'No tiene extension, peticion a logica de negocio';
+        //cFileLocation += '.html';
+        
+        if (cPathname.charAt(cPathname.length - 1) !== '/') {
+            cPathname += '/';
+        }
+        
+        if (typeof pfRouteHandler[cPathname] === 'function') {
+            pfRouteHandler[cPathname](poResponse, poRequest);
         } else {
-            console.log('El fichero NO existe');
             fileNotFound(poResponse, cFileLocation);
         }
         
-    });
-    
+        console.log('pathname', cPathname);
+    }
 }
 
 exports.enrutar = enrutar;
