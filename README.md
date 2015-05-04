@@ -331,6 +331,14 @@ __How do I render plain HTML?__
 
 You don’t! There’s no need to “render” HTML with `res.render()`. If you have a specific file, use `res.sendFile()`. If you are serving many assets from a directory use the `express.static()` middleware.
 
+__Working with the debugger__
+
+Express comes with a [built-in debugger](http://expressjs.com/guide/debugging.html), for more documentation on the `debug` see the [debug guide](https://github.com/visionmedia/debug).
+
+```
+DEBUG=express:* node index.js
+```
+
 ---
 
 __Ajax Calls with express__

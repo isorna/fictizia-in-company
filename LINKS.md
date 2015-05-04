@@ -56,6 +56,8 @@
 * [Using the Aggregation Framework with MongoDB Node.js Driver](http://mongodb.github.io/node-mongodb-native/2.0/tutorials/aggregation/).
 * [Getting Chatty with Angular, Socket.IO, Node/Express and Bootstrap](http://chariotsolutions.com/blog/post/getting-chatty-angular-socket-io-nodeexpress-bootstrap/).
 * [Writing an AngularJS App with Socket.IO](http://www.html5rocks.com/en/tutorials/frameworks/angular-websockets/).
+* [Learn to Use the New Router in Express 4.0](https://scotch.io/tutorials/learn-to-use-the-new-router-in-expressjs-4).
+* [Build a RESTful API Using Node and Express 4](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4).
 
 ## Unix Commands
 
