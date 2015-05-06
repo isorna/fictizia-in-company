@@ -5,9 +5,9 @@
 </head>
 <body>
     <h1>Form</h1>
-    <form action="./" method="post">
-        <input type="text" name="nombre"/>
-        <input type="text" name="apellido"/>
+    <form action="/form" method="post">
+        <input type="text" name="nombre" placeholder="Nombre" value="{{nombre|title}}" />
+        <input type="text" name="apellido" placeholder="Apellido" value="{{apellido|title}}"/>
         <input type="submit" value="Submit"/>
     </form>
 </body>

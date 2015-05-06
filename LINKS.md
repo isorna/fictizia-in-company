@@ -24,6 +24,7 @@
 * [Node Sass Middleware](https://www.npmjs.com/package/node-sass-middleware).
 * [Connect Middleware](https://github.com/senchalabs/connect#readme).
 * [Nodemon](https://github.com/remy/nodemon).
+* [Express Body Parser](https://www.npmjs.com/package/body-parser).
 
 ## Articles
 
