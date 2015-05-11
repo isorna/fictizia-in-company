@@ -892,3 +892,18 @@ Remember that you can [deploy your Meteor app as a mobile app](http://docs.meteo
 * [Kraken](http://krakenjs.com/).
 
 ---
+
+## Unit Testing and E2E Testing
+
+* [Unit Testing](http://www.smashingmagazine.com/2012/06/27/introduction-to-javascript-unit-testing/).
+ * [AngularJS Unit Testing](https://docs.angularjs.org/guide/unit-testing).
+ * [Jasmine](http://jasmine.github.io/) and [Karma](http://karma-runner.github.io/0.12/index.html).
+ * [Introduction to Unit Testing directives](http://angular-tips.com/blog/2014/06/introduction-to-unit-test-directives/).
+* E2E Testing.
+ * [AngularJS E2E Testing](https://docs.angularjs.org/guide/e2e-testing).
+ * [Protractor for AngularJS](http://angular.github.io/protractor/#/).
+* [Advanced Testing and Debugging in AngularJS](http://www.yearofmoo.com/2013/09/advanced-testing-and-debugging-in-angularjs.html).
+* [Testing with Hudson(Jenkins)](http://www.xnoccio.com//362-hudson-parte-1-introduccion/).
+* 
+
+---
