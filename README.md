@@ -895,7 +895,7 @@ Remember that you can [deploy your Meteor app as a mobile app](http://docs.meteo
 
 ## Karma
 
-[Karma]((http://karma-runner.github.io/) is a JavaScript command line tool that can be used to spawn a web server which loads your application's source code and executes your tests. You can configure Karma to run against a number of browsers, which is useful for being confident that your application works on all browsers you need to support. Karma is executed on the command line and will display the results of your tests on the command line once they have run in the browser.
+[Karma](http://karma-runner.github.io/) is a JavaScript command line tool that can be used to spawn a web server which loads your application's source code and executes your tests. You can configure Karma to run against a number of browsers, which is useful for being confident that your application works on all browsers you need to support. Karma is executed on the command line and will display the results of your tests on the command line once they have run in the browser.
 
 Karma is a NodeJS application, and should be installed through npm. Full installation instructions are available on the [Karma website](http://karma-runner.github.io/0.12/intro/installation.html).
 
