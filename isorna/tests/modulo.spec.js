@@ -18,12 +18,12 @@ var oCustomMatchers = {
         }
 };
 
-describe('Probar que el testeo funciona', function () {
+describe('Batería de tests:', function () {
     var oInstancia;
     
     beforeEach(function () {
         oInstancia = new MiClase('Alvaro', '38');
-        //console.log(MiClase2);
+        console.log(MiClase2);
         
         jasmine.addMatchers(oCustomMatchers);
     });
@@ -32,12 +32,13 @@ describe('Probar que el testeo funciona', function () {
         oInstancia = null;
     });
     
-    it('El nombre es "Alvaro"', function () {
+    it('1. El nombre es "Alvaro"', function () {
+        console.log('prueba 1');
         expect(oInstancia.nombre).toBe('Alvaro');
     });
     
     
-    it('La edad es 38', function () {
+    it('2. La edad es 38', function () {
         expect(oInstancia.edad).toBe('38');
         expect(Number(oInstancia.edad)).toBeOneLessThan(39);
     });
