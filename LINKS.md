@@ -25,6 +25,8 @@
 * [Connect Middleware](https://github.com/senchalabs/connect#readme).
 * [Nodemon](https://github.com/remy/nodemon).
 * [Express Body Parser](https://www.npmjs.com/package/body-parser).
+* [Node-MySLQ](https://github.com/felixge/node-mysql).
+* [Oracle-OracleDB](https://github.com/oracle/node-oracledb/).
 
 ## Articles
 
