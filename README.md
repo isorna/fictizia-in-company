@@ -899,6 +899,43 @@ Remember that you can [deploy your Meteor app as a mobile app](http://docs.meteo
 
 Karma is a NodeJS application, and should be installed through npm. Full installation instructions are available on the [Karma website](http://karma-runner.github.io/0.12/intro/installation.html).
 
+Local installation:
+
+```
+npm install karma --save-dev
+
+npm install karma-jasmine karma-chrome-launcher --save-dev
+
+npm install -g karma-cli
+```
+
+Configuration:
+
+```
+karma init my.conf.js
+```
+
+Running:
+
+```
+karma start my.conf.js
+```
+
+If you name your file `karma.conf.js`, you can use `karma start`.
+
+[Read this](http://karma-runner.github.io/0.12/plus/cloud9.html) if you're running karma from cloud9.
+
+```
+# Start Karma without browsers:
+$ karma start --no-browsers
+```
+
+Now, open `http://<projectName>.<cloud9User>.c9.io/` in your browser.
+
+You can integrate [Karma with Grunt](https://github.com/karma-runner/grunt-karma) and [Gulp](https://github.com/karma-runner/gulp-karma) if want.
+
+[Karma Coverage](https://github.com/karma-runner/karma-coverage) is a nice plugin to follow your code test coverage.
+
 ## Jasmine
 
 [Jasmine](http://jasmine.github.io/1.3/introduction.html) is a behavior driven development framework for JavaScript that has become the most popular choice for testing Angular applications. Jasmine provides functions to help with structuring your tests and also making assertions. As your tests grow, keeping them well structured and documented is vital, and Jasmine helps achieve this.
@@ -925,6 +962,6 @@ describe('sorting the list of users', function() {
 });
 ```
 
-Jasmine comes with a number of matchers that help you make a variety of assertions. You should [read the Jasmine documentation](http://jasmine.github.io/1.3/introduction.html#section-Matchers) to see what they are. To use Jasmine with Karma, we use the [karma-jasmine](https://github.com/karma-runner/karma-jasmine) test runner.
+Jasmine comes with a number of matchers that help you make a variety of assertions. You should [read the Jasmine documentation](http://jasmine.github.io/2.3/introduction.html#section-Matchers) to see what they are. To use Jasmine with Karma, we use the [karma-jasmine](https://github.com/karma-runner/karma-jasmine) test runner.
 
 ---
