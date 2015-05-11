@@ -904,6 +904,5 @@ Remember that you can [deploy your Meteor app as a mobile app](http://docs.meteo
  * [Protractor for AngularJS](http://angular.github.io/protractor/#/).
 * [Advanced Testing and Debugging in AngularJS](http://www.yearofmoo.com/2013/09/advanced-testing-and-debugging-in-angularjs.html).
 * [Testing with Hudson(Jenkins)](http://www.xnoccio.com//362-hudson-parte-1-introduccion/).
-* 
 
 ---
