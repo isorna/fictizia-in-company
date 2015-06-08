@@ -13,11 +13,11 @@ Follow the installation steps from [nodejs.org](http://nodejs.org), you'll need 
 
 ### What can be done with Node.js?
 
-With Node.js you can access filesystem, import C/C++ dll's or create and manage servers, like a web server, an ftp server or a tcp server.First steps with Node.js
+With Node.js you can access filesystem, import C/C++ dll's or create and manage servers, like a web server, an ftp server or a tcp server.
 
 Node.js gives us a JavaScript interface to use Google's V8 engine, and that interface includes extra modules and utilities for us to implement our server applications.
 
-We can use Node.js for building automated processes that we'll use in our server applications, like a builder for our configuration files.First steps with Node.js
+We can use Node.js for building automated processes that we'll use in our server applications, like a builder for our configuration files.
 
 Later we'll learn to use Node.js for building a REST API, or a terminal client (CLI), or manage our databases.
 
